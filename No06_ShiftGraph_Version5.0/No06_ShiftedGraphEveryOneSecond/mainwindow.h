@@ -27,14 +27,14 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    int counter;
-    int clicked;
-    int time;
+    int counter;      //ตัวนับเพิ่มแกน X (เป็นเหมือน global variable)
+    int clicked;        //ตัวนับครั้งที่ click ปุ่ม Start,Pause X (เป็นเหมือน global variable)
+    int time;           //เปลี่ยนเวลาที่ใช้ Timer inturrupt X (เป็นเหมือน global variable)
     QVector<double> qv_x,qv_y;
-    void init();
-    void reciever(int);
+    void init();            //ใช้ Load data ComboBox
+    void reciever(int);     //ฟังชันรับค่าจาก ตัวเลือกที่เราเลือกจาก ComboBox
 
-    QTimer *timer;
+    QTimer *timer;          //ใช้ timer แบบนี้เนื่องจากจะได้เป็นเหมือน global variable
 
 
 };
