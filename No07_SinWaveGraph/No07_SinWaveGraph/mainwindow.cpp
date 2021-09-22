@@ -32,7 +32,7 @@ MainWindow::~MainWindow()
 }
 
 
-void MainWindow::on_dial_valueChanged(int value)
+void MainWindow::on_dial_valueChanged(int value) //Change Amplitude
 {
     Amplitude = value;
     QVector<double> x(501),y(501);
@@ -46,7 +46,7 @@ void MainWindow::on_dial_valueChanged(int value)
     ui->plot->replot();
 }
 
-void MainWindow::on_dial_2_valueChanged(int value)
+void MainWindow::on_dial_2_valueChanged(int value) //Change Period
 {
     Period = value;
     QVector<double> x(501),y(501);
